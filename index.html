@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Finder</title>
+  <link rel="stylesheet" href="hackorbit.css">
+<script src="hackorbit.js"></script>
+<script src="hackorbitmap.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Doctor Finder Near You</h1>
+  </header>
+
+  <section class="map-section">
+    <div id="map"></div>
+    <button onclick="findDoctors()">Find Doctors Near Me</button>
+  </section>
+
+  <section id="results">
+  
+  </section>
+  <!--Reviews Section -->
+  <section id="reviews">
+    <h2>Patient Reviews</h2>
+    <div class="review">
+      <h4>Amit Sharma</h4>
+      <p>🗨️ "Very helpful tool! Found a great doctor near my house."</p>
+    </div>
+    <div class="review">
+      <h4>Riya Patel</h4>
+      <p>🗨️ "Accurate location and good list of doctors. Loved the map feature."</p>
+    </div>
+    <div class="review">
+      <h4>Sunil Mehta</h4>
+      <p>🗨️ "Simple and fast. Got a nearby doctor within 2 minutes."</p>
+    </div>
+  </section>
+
+  <!--Contact Us Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault(); alert('Message sent successfully!')">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DoctorFinder | Contact: doctorfinder@example.com</p>
+  </footer>
+  <script async
+defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOvXekKXwTI65xIKs1JFD0FaRcNajvqaw&libraries=places&callback=initMap">
+</script>
+</body>
+</html>
